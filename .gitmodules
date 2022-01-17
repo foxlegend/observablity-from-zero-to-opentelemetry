@@ -1,0 +1,6 @@
+[submodule "spring-petclinic-microservices"]
+	path = spring-petclinic-microservices
+	url = https://github.com/spring-petclinic/spring-petclinic-microservices.git
+[submodule "spring-petclinic-microservices-config"]
+	path = spring-petclinic-microservices-config
+	url = https://github.com/spring-petclinic/spring-petclinic-microservices-config.git

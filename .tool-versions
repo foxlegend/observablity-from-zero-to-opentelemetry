@@ -1,0 +1,4 @@
+java temurin-17.0.1+12
+golang 1.17.4
+maven 3.8.3
+jbang 0.86.0

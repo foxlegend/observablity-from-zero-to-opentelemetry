@@ -1,0 +1,7 @@
+logs/*
+!logs/.gitempty
+
+pids/*
+!pids/.gitempty
+
+dist
