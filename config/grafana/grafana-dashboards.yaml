@@ -3,6 +3,5 @@ apiVersion: 1
 providers:
   - name: 'local filesystem'
     orgId: 1
-    folder: 'General'
     options:
       path: /var/lib/grafana/dashboards
