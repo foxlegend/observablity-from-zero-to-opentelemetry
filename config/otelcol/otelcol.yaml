@@ -2,6 +2,11 @@ receivers:
   otlp:
     protocols:
       grpc:
+      http:
+        endpoint: "0.0.0.0:4318"
+        cors:
+          allowed_origins:
+            - http://localhost:8080
 
   prometheus:
     config:
