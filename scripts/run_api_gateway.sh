@@ -5,7 +5,9 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
+OTEL_OPTIONS="-Dotel.logs.exporter=otlp -Dotel.instrumentation.jdbc-datasource.enabled=true"
+
 echo "Running API gateway"
-nohup java -jar spring-petclinic-microservices/spring-petclinic-api-gateway/target/*.jar --server.port=8080 > logs/gateway-service.log 2>&1 &
+nohup java -javaagent:agent/opentelemetry-javaagent-1.10.0.jar -Dotel.service.name=petclinic-api-gateway ${OTEL_OPTIONS} -jar spring-petclinic-microservices/spring-petclinic-api-gateway/target/*.jar --server.port=8080 > logs/gateway-service.log 2>&1 &
 echo "Waiting for API gateway to start"
 wait-for-it --service localhost:8080 --timeout 30
