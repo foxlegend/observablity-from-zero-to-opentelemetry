@@ -1,0 +1,12 @@
+- model: vets.Specialty
+  pk: 1
+  fields:
+    name: radiology
+- model: vets.Specialty
+  pk: 2
+  fields:
+    name: surgery
+- model: vets.Specialty
+  pk: 3
+  fields:
+    name: dentistry

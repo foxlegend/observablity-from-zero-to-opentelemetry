@@ -1,0 +1,34 @@
+- model: vets.Vet
+  pk: 1
+  fields:
+    first_name: James
+    last_name: Carter
+- model: vets.Vet
+  pk: 2
+  fields:
+    first_name: Helen
+    last_name: Leary
+    specialties: [1]
+- model: vets.Vet
+  pk: 3
+  fields:
+    first_name: Linda
+    last_name: Douglas
+    specialties: [2, 3]
+- model: vets.Vet
+  pk: 4
+  fields:
+    first_name: Rafael
+    last_name: Ortega
+    specialties: [2]
+- model: vets.Vet
+  pk: 5
+  fields:
+    first_name: Henry
+    last_name: Stevens
+    specialties: [1]
+- model: vets.Vet
+  pk: 6
+  fields:
+    first_name: Sharon
+    last_name: Jenkins
