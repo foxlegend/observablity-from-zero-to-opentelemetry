@@ -5,4 +5,4 @@ set -o errtrace
 set -o nounset
 set -o pipefail
 
-pkill -f spring-petclinic
+pkill -9 -f spring-petclinic
