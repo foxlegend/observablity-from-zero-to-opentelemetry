@@ -16,14 +16,13 @@ import com.github.foxlegend.otel.services.BasketService;
 
 import org.jboss.resteasy.reactive.RestPath;
 
-import io.opentelemetry.api.GlobalOpenTelemetry;
-
 @Path("/api/basket")
 public class BasketResource {
     @Inject BasketService service;
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
+    public Response createBasket(@Context UriInfo uriInfo) {
         var basket = service.createBasket(Basket.randomBasket());
         UriBuilder builder = uriInfo.getAbsolutePathBuilder().path(Long.toString(basket.id));
         return Response.created(builder.build()).entity(basket).build();

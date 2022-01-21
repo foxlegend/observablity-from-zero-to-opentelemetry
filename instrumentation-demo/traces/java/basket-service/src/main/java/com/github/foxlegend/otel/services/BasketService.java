@@ -3,7 +3,6 @@ package com.github.foxlegend.otel.services;
 import java.util.Collections;
 import java.util.HashMap;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 
 import com.github.foxlegend.otel.models.Basket;
@@ -11,7 +10,6 @@ import com.github.foxlegend.otel.models.Basket;
 import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.trace.Tracer;
 
-import static io.opentelemetry.api.common.AttributeKey.stringKey;
 
 @ApplicationScoped
 public class BasketService {
@@ -33,7 +31,7 @@ public class BasketService {
         }
     }
 
-    public Basket checkoutBasket(Long id) {
+    public Basket checkoutBasket(Long id) { 
         var basket = basketRepository.get(id);
         if (basket == null) {
             return null;

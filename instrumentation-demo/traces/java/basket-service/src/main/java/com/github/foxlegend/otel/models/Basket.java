@@ -20,11 +20,9 @@ public class Basket {
         Basket basket = new Basket();
 
         var randomProductsCount = (int) ((Math.random() * 9) + 1);
-        System.out.println("products to generate: " + randomProductsCount);
         for (int i = 0; i < randomProductsCount; i++) {
             basket.products.add(Product.randomProduct());
         }
-        System.out.println("generated basket: " + basket);
         return basket;
     }
 
